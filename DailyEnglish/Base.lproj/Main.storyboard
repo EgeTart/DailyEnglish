@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Daily Sentence View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DailySentenceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gke-YR-p6j">
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RHD-jM-fyz">
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="XeB-RW-Joj" appends="YES" id="VHU-xc-1GN"/>
+                                            <outletCollection property="gestureRecognizers" destination="AjR-NX-7kY" appends="YES" id="LVU-jN-MKm"/>
+                                            <outletCollection property="gestureRecognizers" destination="D0O-eO-LEp" appends="YES" id="uYt-fZ-amt"/>
+                                            <outletCollection property="gestureRecognizers" destination="HKg-zw-asV" appends="YES" id="R3g-Ov-bQ5"/>
+                                        </connections>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJk-v4-ikp">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrr-k2-SSy">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RHD-jM-fyz" firstAttribute="leading" secondItem="gke-YR-p6j" secondAttribute="leading" id="7BA-1d-xxS"/>
+                                    <constraint firstItem="RHD-jM-fyz" firstAttribute="top" secondItem="gke-YR-p6j" secondAttribute="top" id="9wU-1H-yxd"/>
+                                    <constraint firstAttribute="trailing" secondItem="fJk-v4-ikp" secondAttribute="trailing" constant="16" id="CA4-Uy-xhs"/>
+                                    <constraint firstItem="fJk-v4-ikp" firstAttribute="top" secondItem="rrr-k2-SSy" secondAttribute="bottom" constant="30" id="M9W-jX-WpP"/>
+                                    <constraint firstAttribute="trailing" secondItem="RHD-jM-fyz" secondAttribute="trailing" id="NZ7-ka-Hqh"/>
+                                    <constraint firstItem="rrr-k2-SSy" firstAttribute="leading" secondItem="gke-YR-p6j" secondAttribute="leading" constant="16" id="Rsl-2k-pZ5"/>
+                                    <constraint firstItem="rrr-k2-SSy" firstAttribute="centerX" secondItem="gke-YR-p6j" secondAttribute="centerX" id="SOI-Vn-LWL"/>
+                                    <constraint firstAttribute="bottom" secondItem="RHD-jM-fyz" secondAttribute="bottom" id="b9a-vE-6bq"/>
+                                    <constraint firstAttribute="trailing" secondItem="rrr-k2-SSy" secondAttribute="trailing" constant="16" id="eol-dj-lmV"/>
+                                    <constraint firstItem="rrr-k2-SSy" firstAttribute="centerY" secondItem="gke-YR-p6j" secondAttribute="centerY" constant="-40" id="q8f-sa-ONG"/>
+                                    <constraint firstItem="fJk-v4-ikp" firstAttribute="leading" secondItem="gke-YR-p6j" secondAttribute="leading" constant="16" id="z4k-Uo-RhJ"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Btf-Mz-mDM">
+                                <items>
+                                    <barButtonItem image="make_picture_icon" id="9Wa-XD-yEA">
+                                        <connections>
+                                            <action selector="savePicture:" destination="BYZ-38-t0r" id="UTh-4V-cfW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tC6-sd-gjc"/>
+                                    <barButtonItem image="play_audio_icon" id="p1b-lR-cBL">
+                                        <connections>
+                                            <action selector="playAudio:" destination="BYZ-38-t0r" id="n3x-uY-3QY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ui3-UX-Y68"/>
+                                    <barButtonItem image="change_font_color_icon" id="POL-Vo-QC2">
+                                        <connections>
+                                            <action selector="changeTextColor:" destination="BYZ-38-t0r" id="Dyj-3u-FqN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Btf-Mz-mDM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IZe-NX-Gjz"/>
+                            <constraint firstAttribute="trailing" secondItem="gke-YR-p6j" secondAttribute="trailing" id="OSe-W9-GGd"/>
+                            <constraint firstItem="gke-YR-p6j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RSo-z8-92x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Btf-Mz-mDM" secondAttribute="bottom" id="SDg-qe-Csu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gke-YR-p6j" secondAttribute="bottom" id="YOC-mG-vbv"/>
+                            <constraint firstItem="gke-YR-p6j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jW1-BR-Qu8"/>
+                            <constraint firstAttribute="trailing" secondItem="Btf-Mz-mDM" secondAttribute="trailing" id="rYo-6M-kif"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="RHD-jM-fyz" id="gXF-f8-R3t"/>
+                        <outlet property="chineseLabel" destination="rrr-k2-SSy" id="D1q-Tu-AZJ"/>
+                        <outlet property="containerView" destination="gke-YR-p6j" id="KYv-o3-5aZ"/>
+                        <outlet property="englishLabel" destination="fJk-v4-ikp" id="vmT-wf-Kdq"/>
+                        <outlet property="toolBarButtomConstraint" destination="SDg-qe-Csu" id="A45-Id-6el"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="HKg-zw-asV">
+                    <connections>
+                        <action selector="loadPreviousSentence:" destination="BYZ-38-t0r" id="hCd-CC-ztC"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="AjR-NX-7kY">
+                    <connections>
+                        <action selector="loadNextSentence:" destination="BYZ-38-t0r" id="sb7-Gs-hSc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="XeB-RW-Joj" userLabel="Swipe Up">
+                    <connections>
+                        <action selector="showToolBar:" destination="BYZ-38-t0r" id="OMJ-FY-Eo5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="D0O-eO-LEp" userLabel="Swipe Down">
+                    <connections>
+                        <action selector="hideToolBar:" destination="BYZ-38-t0r" id="ZYz-pu-Nii"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="16"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="change_font_color_icon" width="30" height="30"/>
+        <image name="make_picture_icon" width="30" height="30"/>
+        <image name="play_audio_icon" width="30" height="30"/>
+    </resources>
+</document>
